@@ -346,10 +346,6 @@
                 <div id="aviso" *ngIf="!fatura"> 
                   Por favor, informe o faturamento.
                 </div>
-                <div id="aviso" *ngIf="fatura && !lucro && !impostoMei && !impostoSimples && !impostoPresumido">
-                  <br />
-                  Por favor, informe o lucro previsto.
-                </div>
                 <span id="aviso" *ngIf="impostoMei || impostoSimples || impostoPresumido">
                   *Conforme o tipo de atividade, os valores e regimes de tributação disponíveis podem sofrer alteração.
                 </span>

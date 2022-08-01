@@ -92,7 +92,7 @@ body{background-color:#eee;}
 
 #generic_price_table .generic_content.error .generic_head_price .generic_head_content .head_bg,
 #generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg{
-  border-color: #E74C3C rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #E74C3C;
+  border-color: #e0796d rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #e0796d;
   color: #fff;
 }
 
@@ -103,7 +103,7 @@ body{background-color:#eee;}
 
 #generic_price_table .generic_content:hover .generic_price_btn a,
 #generic_price_table .generic_content.error .generic_price_btn a{
-  background-color: #E74C3C;
+  background-color: #e0796d;
   color: #fff;
 } 
 
