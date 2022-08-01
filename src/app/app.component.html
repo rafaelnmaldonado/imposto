@@ -3,11 +3,9 @@
           <div class="container">
               <div class="row">
                   <div class="col-md-12">
-                      <!--PRICE HEADING START-->
                       <div class="price-heading clearfix">
                           <h1>Regime de tributação PJ</h1>
                       </div>
-                      <!--//PRICE HEADING END-->
                   </div>
               </div>
           </div>
@@ -20,7 +18,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="input">R$</span>
                     </div>
-                    <input class="form-control" id="input" maxlength="9" placeholder="1000" (input)="mudancaValor($any($event.target).value)"/>
+                    <input class="form-control" id="input" maxlength="9" placeholder="0" (input)="mudancaValor($any($event.target).value)"/>
                     <div class="input-group-append">
                       <span class="input-group-text" id="input">,00</span>
                     </div>
@@ -33,7 +31,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="input">R$</span>
                       </div>
-                      <input class="form-control" id="input" maxlength="9" placeholder="200" (input)="mudancaLucro($any($event.target).value)"/>
+                      <input class="form-control" id="input" maxlength="9" placeholder="0" (input)="mudancaLucro($any($event.target).value)"/>
                       <div class="input-group-append">
                         <span class="input-group-text" id="input">,00</span>
                       </div>
