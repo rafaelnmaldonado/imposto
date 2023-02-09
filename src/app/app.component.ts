@@ -15,7 +15,7 @@ export class AppComponent {
   impostoMei: number = 0;
   impostoSimples: number = 0;
   impostoPresumido: number = 0;
-  lucro: number = 0;
+  lucro: number = -1;
   impostoReal: number = 0;
   erro: boolean = false;
 
@@ -33,7 +33,7 @@ export class AppComponent {
       this.mudancaLucro(this.lucro);
     }
     else {
-      this.lucro = 0;
+      this.lucro = -1;
     }
   }
 
@@ -43,7 +43,7 @@ export class AppComponent {
     this.melhorPresumido = "generic_content";
     this.melhorReal = "generic_content";
     this.lucro = parseFloat(lucro);
-    if (this.lucro > this.fatura) this.erro = true;
+    if (this.lucro > this.fatura || this.lucro < 0 || lucro == "") this.erro = true;
     else this.erro = false;
     if (!this.erro) {
       this.impostoReal = this.calculoReal(this.fatura, this.lucro);
