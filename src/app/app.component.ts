@@ -15,9 +15,10 @@ export class AppComponent {
   impostoMei: number = 0;
   impostoSimples: number = 0;
   impostoPresumido: number = 0;
-  lucro: number = -1;
+  lucro: number = 0;
   impostoReal: number = 0;
   erro: boolean = false;
+  mensagemErroLucro: string = "";
 
   mudancaValor(valor: string) {
     this.melhorMei = "generic_content";
@@ -28,12 +29,12 @@ export class AppComponent {
     this.impostoSimples = 0;
     this.impostoPresumido = 0;
     this.fatura = parseFloat(valor);
-    this.melhorRegime(this.fatura);
+    if (this.fatura > 0) this.melhorRegime(this.fatura);
     if (this.fatura) {
       this.mudancaLucro(this.lucro);
     }
     else {
-      this.lucro = -1;
+      this.lucro = 0;
     }
   }
 
@@ -45,6 +46,9 @@ export class AppComponent {
     this.lucro = parseFloat(lucro);
     if (this.lucro > this.fatura || this.lucro < 0 || lucro == "") this.erro = true;
     else this.erro = false;
+    if (this.lucro > this.fatura) this.mensagemErroLucro = "O lucro é maior que o faturamento."
+    if (this.lucro < 0) this.mensagemErroLucro = "O lucro não pode ser negativo."
+    if (lucro == "") this.mensagemErroLucro = "Por favor, informe o lucro previsto."
     if (!this.erro) {
       this.impostoReal = this.calculoReal(this.fatura, this.lucro);
     }

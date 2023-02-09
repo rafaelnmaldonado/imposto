@@ -308,7 +308,7 @@
                     </div>
                     <!--//PRICE CONTENT END-->
 
-                    <div class="generic_content error" *ngIf="fatura && erro && fatura !== 0">
+                    <div class="generic_content error" *ngIf="fatura && erro">
                         
                       <!--HEAD PRICE DETAIL START-->
                       <div class="generic_head_price clearfix">
@@ -329,7 +329,7 @@
                           <!--PRICE START-->
                           <div class="generic_price_tag clearfix">  
                               <span class="price">
-                                  <div class="month">Por favor, informe o lucro previsto</div>
+                                  <div class="month">{{ mensagemErroLucro }}</div>
                               </span>
                           </div>
                           <!--//PRICE END-->
